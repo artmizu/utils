@@ -1,15 +1,24 @@
-# pkg-name
+# Handy package of small JS utilities
+This is all I use in my projects, maybe you will find something useful for yourself.
 
-[![NPM version](https://img.shields.io/npm/v/pkg-name?color=a1b858&label=)](https://www.npmjs.com/package/pkg-name)
+## Utility types
+* Formatters for price, date, phone number and other stuff
+* Russian-specific declination
+* Utils for the data transformation
+* Helper for creating the data structure for the pagination UI component
 
-## Sponsors
+## Features
+* Typescript support
 
-<p align="center">
-  <a href="https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg">
-    <img src='https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg'/>
-  </a>
-</p>
+## How to install
+Install package via a package manager:
+```bash
+# using npm
+npm install @artmizu/utils
 
-## License
+# using yarm
+yarn add @artmizu/utils
 
-[MIT](./LICENSE) License © 2022 [Anthony Fu](https://github.com/antfu)
+# using pnpm
+pnpm add @artmizu/utils
+```
