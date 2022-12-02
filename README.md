@@ -1,4 +1,4 @@
-# Handy package of small JS utilities
+# Handy collection of small JS utilities
 This is all I use in my projects, maybe you will find something useful for yourself.
 
 ## Utility types
