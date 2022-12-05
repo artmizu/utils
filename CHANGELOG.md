@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/artmizu/utils/compare/v1.0.0...v1.1.0) (2022-12-05)
+
+
+### Features
+
+* split utils by client & universal group ([4ade367](https://github.com/artmizu/utils/commit/4ade367cf5d6bd9ecd957bae6ef9a0336183b4ec))
+
 ## 1.0.0 (2022-12-02)
 
 
