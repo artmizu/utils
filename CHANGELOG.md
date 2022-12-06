@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/artmizu/utils/compare/v1.1.2...v1.1.3) (2022-12-06)
+
+
+### Bug Fixes
+
+* boolean input type support ([62a7fa9](https://github.com/artmizu/utils/commit/62a7fa9c15e28cf870f5a96c7935f6868ab080c4))
+
 ## [1.1.2](https://github.com/artmizu/utils/compare/v1.1.1...v1.1.2) (2022-12-06)
 
 
