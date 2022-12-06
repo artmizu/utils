@@ -9,13 +9,9 @@ export default function getFormData(obj: { [key: string]: FileList | Entity | En
   for (const prop in obj) {
     const el = obj[prop]
 
-    if (el instanceof FileList || Array.isArray(el)) {
-      Array.from<Entity>(el).forEach((el) => {
-        if (el instanceof File)
-          data.append(prop, el)
-        else if (el instanceof Object)
-          data.append(prop, JSON.stringify(el))
-        else data.append(prop, el.toString())
+    if (el instanceof FileList || (Array.isArray(el) && el.every(i => i instanceof File))) {
+      Array.from<File>(el).forEach((el) => {
+        data.append(prop, el)
       })
     }
     else if (el instanceof File) {
