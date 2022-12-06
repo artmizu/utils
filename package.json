@@ -1,7 +1,7 @@
 {
   "name": "@artmizu/utils",
   "type": "module",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "packageManager": "pnpm@7.12.0",
   "description": "Library of useful utilities, some of them specific to the Russian language",
   "author": "Aleksandr Saburov <hello@artmizu.ru> (http://artmizu.ru/)",
