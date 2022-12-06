@@ -1,7 +1,7 @@
 /**
  * Transform an object into a form data
  **/
-type Entity = object | number | string | File
+type Entity = object | number | string | File | boolean
 
 export default function getFormData(obj: { [key: string]: FileList | Entity | Entity[] | undefined | null }) {
   const data = new FormData()
@@ -31,4 +31,3 @@ export default function getFormData(obj: { [key: string]: FileList | Entity | En
 
   return data
 }
-
