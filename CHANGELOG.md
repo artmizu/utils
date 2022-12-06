@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/artmizu/utils/compare/v1.1.0...v1.1.1) (2022-12-06)
+
+
+### Bug Fixes
+
+* additional input types ([32e25e9](https://github.com/artmizu/utils/commit/32e25e989e750830db72481fa46c095a4ecd99ac))
+
 ## [1.1.0](https://github.com/artmizu/utils/compare/v1.0.0...v1.1.0) (2022-12-05)
 
 
