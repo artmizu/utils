@@ -1,16 +1,25 @@
 /**
  * Transform an object into a form data
  **/
-export default function getFormData(obj: { [key: string]: FileList | object | number | string | File[] | undefined | null }) {
+type Entity = object | number | string | File
+
+export default function getFormData(obj: { [key: string]: FileList | Entity | Entity[] | undefined | null }) {
   const data = new FormData()
 
   for (const prop in obj) {
     const el = obj[prop]
 
     if (el instanceof FileList || Array.isArray(el)) {
-      Array.from<File>(el).forEach((el) => {
-        data.append(prop, el)
+      Array.from<Entity>(el).forEach((el) => {
+        if (el instanceof File)
+          data.append(prop, el)
+        else if (el instanceof Object)
+          data.append(prop, JSON.stringify(el))
+        else data.append(prop, el.toString())
       })
+    }
+    else if (el instanceof File) {
+      data.append(prop, el)
     }
     else if (el instanceof Object) {
       data.append(prop, JSON.stringify(el))
@@ -22,3 +31,4 @@ export default function getFormData(obj: { [key: string]: FileList | object | nu
 
   return data
 }
+

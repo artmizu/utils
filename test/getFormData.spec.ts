@@ -9,16 +9,18 @@ it('check getFormData', () => {
   }))
 
   vi.stubGlobal('FormData', FormData)
-  vi.stubGlobal('FileList', Array)
+  vi.stubGlobal('FileList', class FileList { })
+  vi.stubGlobal('File', class File { })
 
   const obj = {
     x: 10,
     y: 'somevalue',
     z: ['1', '2'],
+    t: [{ z: 1, x: 2 }, { z: 10, w: 20 }],
     w: undefined,
     r: null,
   }
 
   getFormData(obj)
-  expect(appendFn.mock.calls).toEqual([['x', '10'], ['y', 'somevalue'], ['z', '1'], ['z', '2']])
+  expect(appendFn.mock.calls).toEqual([['x', '10'], ['y', 'somevalue'], ['z', '1'], ['z', '2'], ['t', '{"z":1,"x":2}'], ['t', '{"z":10,"w":20}']])
 })
