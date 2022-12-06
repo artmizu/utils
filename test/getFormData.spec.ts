@@ -15,6 +15,8 @@ it('check getFormData', () => {
     x: 10,
     y: 'somevalue',
     z: ['1', '2'],
+    w: undefined,
+    r: null,
   }
 
   getFormData(obj)
