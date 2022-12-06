@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.4](https://github.com/artmizu/utils/compare/v1.1.3...v1.1.4) (2022-12-06)
+
+
+### Bug Fixes
+
+* inner logic fix ([80a7ee8](https://github.com/artmizu/utils/commit/80a7ee8b93065bea3c576704996e1b850a3e6e03))
+
 ## [1.1.3](https://github.com/artmizu/utils/compare/v1.1.2...v1.1.3) (2022-12-06)
 
 
