@@ -22,13 +22,3 @@ yarn add @artmizu/utils
 # using pnpm
 pnpm add @artmizu/utils
 ```
-
-## Utilities are divided into client and universal 
-The client includes a browser-specific API, such as a window object, universal utilities can be used universally.
-```javascript
-// universal utils import
-import { formatAddress } from '@artmizu/utils'
-
-// client utils import
-import { getWidthWithMargin } from '@artmizu/utils/client'
-```

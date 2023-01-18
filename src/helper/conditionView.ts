@@ -18,7 +18,7 @@ interface ConditionViewParams {
 }
 
 /**
- * This function can tell whether something needs to be shown to the client or not under certain conditions:
+ * Client-only util, this function can tell whether something needs to be shown to the client or not under certain conditions:
  * - Client platform type
  * - He's already seen it or not
  * - How many times you need to show something and with what interval between shows

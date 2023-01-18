@@ -13,24 +13,19 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "types": "./dist/universal.d.ts",
-      "require": "./dist/universal.cjs",
-      "import": "./dist/universal.mjs"
-    },
-    "./client": {
-      "types": "./dist/client.d.ts",
-      "require": "./dist/client.cjs",
-      "import": "./dist/client.mjs"
+      "types": "./dist/lib.d.ts",
+      "require": "./dist/lib.cjs",
+      "import": "./dist/lib.mjs"
     }
   },
-  "main": "./dist/universal.mjs",
-  "module": "./dist/universal.mjs",
-  "types": "./dist/universal.d.ts",
+  "main": "./dist/lib.mjs",
+  "module": "./dist/lib.mjs",
+  "types": "./dist/lib.d.ts",
   "typesVersions": {
     "*": {
       "*": [
         "./dist/*",
-        "./dist/universal.d.ts"
+        "./dist/lib.d.ts"
       ]
     }
   },
@@ -41,7 +36,7 @@
     "build": "unbuild",
     "dev": "unbuild --stub",
     "lint": "eslint .",
-    "start": "esno src/universal.ts",
+    "start": "esno src/lib.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
