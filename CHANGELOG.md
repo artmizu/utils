@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.5](https://github.com/artmizu/utils/compare/v1.1.4...v1.1.5) (2023-01-18)
+
+
+### Bug Fixes
+
+* build and paths ([9f4fdc9](https://github.com/artmizu/utils/commit/9f4fdc95bf7b4b65944f49494f14b5eb72d7e651))
+
 ## [1.1.4](https://github.com/artmizu/utils/compare/v1.1.3...v1.1.4) (2022-12-06)
 
 
