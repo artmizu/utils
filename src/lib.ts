@@ -7,6 +7,8 @@ import getFormData from './helper/getFormData'
 import paginationArray from './helper/paginationArray'
 import conditionView from './helper/conditionView'
 import getWidthWithMargin from './helper/getWidthWithMargin'
+import createFactory from './helper/createFactory'
+import createListFactory from './helper/createListFactory'
 
 export {
   declination,
@@ -18,4 +20,6 @@ export {
   paginationArray,
   conditionView,
   getWidthWithMargin,
+  createFactory,
+  createListFactory,
 }
