@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.8](https://github.com/artmizu/utils/compare/v1.1.7...v1.1.8) (2023-06-10)
+
+
+### Bug Fixes
+
+* getFormData key for arrays fix ([7a4eb28](https://github.com/artmizu/utils/commit/7a4eb28bb26b97a4b37c9b23a2d1c9a54e226e35))
+
 ## [1.1.7](https://github.com/artmizu/utils/compare/v1.1.6...v1.1.7) (2023-06-10)
 
 
