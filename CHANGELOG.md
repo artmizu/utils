@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.7](https://github.com/artmizu/utils/compare/v1.1.6...v1.1.7) (2023-06-10)
+
+
+### Bug Fixes
+
+* getFormData handles arrays ([02dbc0d](https://github.com/artmizu/utils/commit/02dbc0dd2dc4c520cfa5163cc10970bea3c50b86))
+
 ## [1.1.6](https://github.com/artmizu/utils/compare/v1.1.5...v1.1.6) (2023-02-16)
 
 
