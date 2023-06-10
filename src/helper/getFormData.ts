@@ -11,15 +11,15 @@ export default function getFormData(obj: { [key: string]: FileList | Entity | En
 
     if (el instanceof FileList || (Array.isArray(el) && el.every(i => i instanceof File))) {
       Array.from<File>(el).forEach((el) => {
-        data.append(prop, el)
+        data.append(`${prop}[]`, el)
       })
     }
     else if (Array.isArray(el)) {
       el.forEach((e) => {
         if (e instanceof Object)
-          data.append(prop, JSON.stringify(e))
+          data.append(`${prop}[]`, JSON.stringify(e))
         else if (e !== undefined && el !== null)
-          data.append(prop, e.toString())
+          data.append(`${prop}[]`, e.toString())
       })
     }
     else if (el instanceof File) {

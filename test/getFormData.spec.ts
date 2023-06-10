@@ -23,5 +23,5 @@ it('check getFormData', () => {
   }
 
   getFormData(obj)
-  expect(appendFn.mock.calls).toEqual([['a', 'true'], ['x', '10'], ['y', 'somevalue'], ['z', '1'], ['z', '2'], ['t', '{"z":1,"x":2}'], ['t', '{"z":10,"w":20}']])
+  expect(appendFn.mock.calls).toEqual([['a', 'true'], ['x', '10'], ['y', 'somevalue'], ['z[]', '1'], ['z[]', '2'], ['t[]', '{"z":1,"x":2}'], ['t[]', '{"z":10,"w":20}']])
 })
