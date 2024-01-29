@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/artmizu/utils/compare/v1.1.8...v1.2.0) (2024-01-29)
+
+
+### Features
+
+* add region field formatAddress ([3d8dd39](https://github.com/artmizu/utils/commit/3d8dd39478b2949134ac16ab14bc8129132d3ce3))
+
 ## [1.1.8](https://github.com/artmizu/utils/compare/v1.1.7...v1.1.8) (2023-06-10)
 
 
