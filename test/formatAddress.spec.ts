@@ -13,6 +13,7 @@ it('check simple', () => {
 
 it('check complex', () => {
   const address = formatAddress({
+    region: 'Удмуртская Республика',
     city: 'Ижевск',
     district: 'Завьяловский',
     street: 'Удмуртская',
@@ -22,5 +23,5 @@ it('check complex', () => {
     floor: 4,
   })
 
-  expect(address).toBe('Ижевск, Завьяловский, Удмуртская, дом 20, кв. 30, 3 подъезд, 4 этаж')
+  expect(address).toBe('Удмуртская Республика, Ижевск, Завьяловский, Удмуртская, дом 20, кв. 30, 3 подъезд, 4 этаж')
 })
