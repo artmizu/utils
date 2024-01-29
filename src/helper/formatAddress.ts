@@ -16,7 +16,7 @@ type AddressEntity = 'region' | 'city' | 'district' | 'street' | 'house' | 'apar
  * } // 'Удмуртская Республика, Ижевск, Завьяловский, Удмуртская, дом 20, кв. 30, 3 подъезд, 4 этаж'
  */
 export default function formatAddress(address: { [key in AddressEntity]?: string | number }) {
-  const sequence: AddressEntity[] = [ 'region', 'city', 'district', 'street', 'house', 'apartment', 'entrance', 'floor']
+  const sequence: AddressEntity[] = ['region', 'city', 'district', 'street', 'house', 'apartment', 'entrance', 'floor']
   const tmp: string[] = []
 
   function appendHint(type: AddressEntity, val: string | number) {
@@ -29,7 +29,7 @@ export default function formatAddress(address: { [key in AddressEntity]?: string
      * не актуален
      */
     if (type === 'region')
-    return `${val}`
+      return `${val}`
     else if (type === 'city')
       return `${val}`
     else if (type === 'district')
