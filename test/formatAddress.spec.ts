@@ -25,3 +25,13 @@ it('check complex', () => {
 
   expect(address).toBe('Удмуртская Республика, Ижевск, Завьяловский, Удмуртская, дом 20, кв. 30, 3 подъезд, 4 этаж')
 })
+
+it('check when city and street are equal', () => {
+  const address = formatAddress({
+    city: 'поселок городского типа Тарки',
+    street: 'поселок городского типа Тарки',
+    house: '123',
+  })
+
+  expect(address).toBe('поселок городского типа Тарки, дом 123')
+})
