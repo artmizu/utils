@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/artmizu/utils/compare/v1.2.0...v1.2.1) (2026-05-22)
+
+
+### Bug Fixes
+
+* prevent same street and city duplication ([94a58dc](https://github.com/artmizu/utils/commit/94a58dc6fe1e17122f503b58bb53d749be5c3d9f))
+
 ## [1.2.0](https://github.com/artmizu/utils/compare/v1.1.8...v1.2.0) (2024-01-29)
 
 
