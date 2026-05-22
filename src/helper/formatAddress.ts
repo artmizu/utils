@@ -17,9 +17,10 @@ type AddressEntity = 'region' | 'city' | 'district' | 'street' | 'house' | 'apar
  */
 export default function formatAddress(address: { [key in AddressEntity]?: string | number }) {
   const sequence: AddressEntity[] = ['region', 'city', 'district', 'street', 'house', 'apartment', 'entrance', 'floor']
-  const tmp: string[] = []
+  const result: string[] = []
+  const normalizedCity = address.city ? normalizeAddressPart(address.city) : ''
 
-  function appendHint(type: AddressEntity, val: string | number) {
+  function formatPart(type: AddressEntity, value: string | number) {
     /**
      * К городу не подставляем букву «г.» т.к. там могут быть не только города но и значения по
      * типу «Посёлок городского типа» для которых подпись «г.» не актуальна
@@ -29,34 +30,47 @@ export default function formatAddress(address: { [key in AddressEntity]?: string
      * не актуален
      */
     if (type === 'region')
-      return `${val}`
+      return `${value}`
     else if (type === 'city')
-      return `${val}`
+      return `${value}`
     else if (type === 'district')
-      return `${val}`
+      return `${value}`
     else if (type === 'street')
-      return `${val}`
+      return `${value}`
     else if (type === 'house')
-      return `дом ${val}`
+      return `дом ${value}`
     else if (type === 'apartment')
-      return `кв. ${val}`
+      return `кв. ${value}`
     else if (type === 'entrance')
-      return `${val} подъезд`
+      return `${value} подъезд`
     else if (type === 'floor')
-      return `${val} этаж`
+      return `${value} этаж`
   }
 
   sequence.forEach((type) => {
-    const val = address[type]
-    if (val) {
-      const text = appendHint(type, val)
+    const part = address[type]
+
+    if (type === 'street' && normalizedCity && part && normalizeAddressPart(part) === normalizedCity)
+      return
+
+    if (part) {
+      const text = formatPart(type, part)
+
       if (text)
-        tmp.push(text)
+        result.push(text)
     }
   })
 
-  if (tmp.length > 0)
-    return tmp.join(', ')
-  else
-    return ''
+  return result.length ? result.join(', ') : ''
+}
+
+function normalizeAddressPart(value: string | number) {
+  return `${value}`
+    .toLowerCase()
+    .replaceAll('ё', 'е')
+    .replace(/[.,]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .replace(/^(г|город)\s+/i, '')
+    .replace(/^(ул|улица)\s+/i, '')
 }
