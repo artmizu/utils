@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/artmizu/utils/compare/v1.2.1...v1.2.2) (2026-05-23)
+
+
+### Bug Fixes
+
+* use packageManager pnpm in workflows ([194e365](https://github.com/artmizu/utils/commit/194e3653ec709a1447703f27a54fcd89b807212b))
+
 ## [1.2.1](https://github.com/artmizu/utils/compare/v1.2.0...v1.2.1) (2026-05-22)
 
 
