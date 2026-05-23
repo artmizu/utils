@@ -4,6 +4,9 @@ on:
       - main
 
 name: release-please
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 permissions:
   contents: write
   pull-requests: write
@@ -17,16 +20,16 @@ jobs:
         with:
           release-type: node
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         if: ${{ steps.release.outputs.release_created }}
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
         if: ${{ steps.release.outputs.release_created }}
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
-          node-version: 18
+          node-version: 24
           registry-url: 'https://registry.npmjs.org'
           cache: pnpm
         if: ${{ steps.release.outputs.release_created }}
@@ -37,7 +40,7 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
 
       - name: Setup pnpm cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ${{ env.STORE_PATH }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('pnpm-lock.yaml') }}
